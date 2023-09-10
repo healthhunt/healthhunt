@@ -4,6 +4,7 @@ export default defineNuxtConfig({
 		'@nuxtjs/tailwindcss',
 		'@sidebase/nuxt-auth',
 		'@nuxtjs/eslint-module',
+		'@tailvue/nuxt',
 	],
 	build: {
 		transpile: ['trpc-nuxt']

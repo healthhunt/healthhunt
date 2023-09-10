@@ -1,0 +1,129 @@
+[
+	{
+		"id": 0,
+		"name": "Dr. Fred Fongeallaz",
+		"description": "Experienced therapist specializing in anxiety and stress management.",
+		"location": "Oakwood Medical Center",
+		"phone": "(555) 123-4567",
+		"latitude": 34.0522,
+		"longitude": -118.2437,
+		"stars": 4.5,
+		"tags": [
+			"therapist",
+			"counselor",
+			"stress management",
+			"anxiety"
+		]
+	},
+	{
+		"id": 1,
+		"name": "Dr. Homer Schnorr",
+		"description": "Seasoned psychiatrist with a focus on mood disorders.",
+		"location": "Serenity Mental Health Clinic",
+		"phone": "(555) 987-6543",
+		"latitude": 40.7128,
+		"longitude": -74.0060,
+		"stars": 4.2,
+		"tags": [
+			"psychiatrist",
+			"mood disorders",
+			"depression",
+			"therapy"
+		]
+	},
+	{
+		"id": 2,
+		"name": "Dr. Allison Leigh",
+		"description": "Dedicated psychologist specializing in family counseling.",
+		"location": "Harmony Wellness Center",
+		"phone": "(555) 567-8901",
+		"latitude": 37.7749,
+		"longitude": -122.4194,
+		"stars": 4.7,
+		"tags": [
+			"psychologist",
+			"counselor",
+			"family therapy",
+			"relationship"
+		]
+	},
+	{
+		"id": 3,
+		"name": "Dr. Felix Ensey",
+		"description": "Compassionate therapist for children and adolescents.",
+		"location": "Sunshine Pediatrics & Mental Health",
+		"phone": "(555) 234-5678",
+		"latitude": 0.00,
+		"longitude": 0.00,
+		"stars": 0.0,
+		"tags": [
+			"therapist",
+			"child therapy",
+			"adolescent therapy"
+		]
+	},
+	{
+		"id": 4,
+		"name": "Dr. Emily Clarke",
+		"description": "Experienced child psychologist specializing in developmental disorders.",
+		"location": "Bright Minds Clinic",
+		"phone": "(555) 789-0123",
+		"latitude": 41.8781,
+		"longitude": -87.6298,
+		"stars": 4.8,
+		"tags": [
+			"psychologist",
+			"child psychologist",
+			"developmental disorders",
+			"therapy"
+		]
+	},
+	{
+		"id": 5,
+		"name": "Dr. Olivia Ramirez",
+		"description": "Dedicated marriage counselor with expertise in couples therapy.",
+		"location": "Heartfelt Counseling Center",
+		"phone": "(555) 456-7890",
+		"latitude": 34.0522,
+		"longitude": -118.2437,
+		"stars": 4.6,
+		"tags": [
+			"counselor",
+			"marriage counselor",
+			"couples therapy",
+			"relationship"
+		]
+	},
+	{
+		"id": 6,
+		"name": "Dr. Sophia Miller",
+		"description": "Compassionate psychiatrist specializing in mood disorders and medication management.",
+		"location": "Serenity Wellness Institute",
+		"phone": "(555) 345-6789",
+		"latitude": 40.7128,
+		"longitude": -74.0060,
+		"stars": 4.9,
+		"tags": [
+			"psychiatrist",
+			"mood disorders",
+			"medication management",
+			"therapy"
+		]
+	},
+	{
+		"id": 7,
+		"name": "Dr. Mia Bennett",
+		"description": "Experienced therapist helping individuals overcome trauma and anxiety.",
+		"location": "Tranquil Mind Counseling",
+		"phone": "(555) 234-5678",
+		"latitude": 37.7749,
+		"longitude": -122.4194,
+		"stars": 4.7,
+		"tags": [
+			"therapist",
+			"trauma therapy",
+			"anxiety",
+			"stress management"
+		]
+	}
+]

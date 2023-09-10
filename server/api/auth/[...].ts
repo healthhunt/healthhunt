@@ -1,13 +1,12 @@
 import 'dotenv/config';
 
-import { createHmac } from 'node:crypto';
-
 import { v4 as uuidv4 } from 'uuid';
 
 import { NuxtAuthHandler } from '#auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import { prisma } from '~/server/prisma';
 import type { User } from 'next-auth';
+import { createPassword } from '~/server/auth';
 
 declare module 'next-auth' {
 	interface User {
@@ -23,14 +22,6 @@ declare module 'next-auth/jwt' {
 	interface JWT {
 		user: import('next-auth').User
 	}
-}
-
-function hashAndSalt(password: string, salt: string) {
-	const hasher = createHmac('sha512', salt);
-
-	hasher.update(password);
-
-	return hasher.digest('hex');
 }
 
 // NOTE: https://sidebase.io/nuxt-auth/getting-started
@@ -66,7 +57,7 @@ export default NuxtAuthHandler({
 
 				if (credentials.register === 'true') {
 					const salt = uuidv4();
-					const hashedPassword = hashAndSalt(credentials.password, salt);
+					const hashedPassword = createPassword(credentials.password, salt);
 
 					try {
 						const newUser = await prisma.user.create({
@@ -95,7 +86,7 @@ export default NuxtAuthHandler({
 						return null;
 					}
 	
-					const hashedPassword = hashAndSalt(credentials.password, user.salt);
+					const hashedPassword = createPassword(credentials.password, user.salt);
 	
 					if (hashedPassword !== user.password) {
 						return null;

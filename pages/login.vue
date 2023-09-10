@@ -22,9 +22,6 @@ async function login() {
 		password: password.value,
 		register: 'false',
 		redirect: false,
-		callbackUrl: route.query.callbackUrl === null
-			? undefined : Array.isArray(route.query.callbackUrl) ? route.query.callbackUrl[0]!
-				: route.query.callbackUrl,
 	});
 
 	if (error) {
@@ -32,7 +29,7 @@ async function login() {
 	} else {
 		errorMessage.value = undefined;
 
-		return navigateTo(url, { external: true });
+		return navigateTo('/');
 	}
 }
 </script>

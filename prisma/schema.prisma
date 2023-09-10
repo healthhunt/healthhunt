@@ -7,20 +7,43 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Like {
-  id     Int @id @default(autoincrement())
-  userId Int
-  postId Int
-
-  @@map(name: "like")
-}
-
 model User {
   id       Int    @id @default(autoincrement())
   username String @unique
   password String
 
+  likedArticles Article[]
+  likedDoctors  Doctor[]
+
   salt String @default(uuid()) @db.Uuid
 
   @@map(name: "user")
+}
+
+model Doctor {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String
+  location    String
+  phone       String
+  latitude    Float
+  longitude   Float
+  stars       Float
+  tags        String[]
+
+  likedBy User[]
+
+  @@map(name: "doctor")
+}
+
+model Article {
+  id          Int      @id @default(autoincrement())
+  title       String
+  thumbnail   String
+  tags        String[]
+  description String
+
+  likedBy User[]
+
+  @@map(name: "article")
 }

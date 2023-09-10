@@ -3,12 +3,15 @@ const { status } = useAuth();
 </script>
 
 <template>
-	<div class="w-full border border-b-[1] border-base-100 shadow-xl py-6 flex justify-center">
+	<div class="w-full border border-b-[1] border-base-100 shadow-xl py-6 flex justify-center px-8">
 
 		<div class="flex w-full max-w-[75em]">
-			<h1 class="font-bold text-4xl">
-				Health<span class="text-primary">Site</span>
-			</h1>
+
+			<NuxtLink to="/">
+				<h1 class="font-bold text-4xl">
+					Health<span class="text-primary">Site</span>
+				</h1>
+			</NuxtLink>
 
 			<div class="ml-auto">
 				<NuxtLink v-if="status === 'authenticated'" to="/profile">

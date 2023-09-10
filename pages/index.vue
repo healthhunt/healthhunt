@@ -1,14 +1,11 @@
 <script setup lang="ts">
 import type { inferRouterOutputs } from '@trpc/server';
-import { string } from 'zod';
-import type { AppRouter } from '~/server/trpc/routers';
+import { AppRouter } from '~/server/trpc/routers';
 
 const { $client } = useNuxtApp();
 
-type Article = inferRouterOutputs<AppRouter>['getRecommendedArticles'][number];
-
 async function getArticles() {
-	const data = await $client.getRecommendedArticles.query({
+	const data = await $client.article.getRecommended.query({
 		text: content.value,
 	});
 
@@ -16,11 +13,11 @@ async function getArticles() {
 }
 
 const content = ref('');
-const articles = ref<Article[]>();
+const articles = ref<inferRouterOutputs<AppRouter>['article']['getRecommended']>();
 </script>
 
 <template>
-	<div class="hero min-h-screen bg-base-200">
+	<div class="grid place-items-center justify-center">
 		<div class="hero-content text-center">
 			<form class="prose flex flex-col gap-6 items-center" v-if="!articles" @submit.prevent="getArticles">
 				<h1> How are you feeling? </h1>

@@ -31,7 +31,7 @@ export default router({
 				});
 			}
 
-			if (input.tags) {
+			if (input.tags?.length) {
 				and.push({
 					tags: {
 						hasSome: input.tags,

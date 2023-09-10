@@ -73,20 +73,16 @@ const newPassword = ref('');
 			</div>
 
 			<div>
-
 				<div class="prose max-w-full py-16">
 					<h1>Your saved articles: </h1>
 				</div>
-
 				<div v-if="pendingArticles">
 					<span class="loading loading-spinner loading-lg"></span>
 				</div>
-				<div v-else-if="articles" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+				<div v-else-if="articles">
 					<Article v-for="article of articles" :article="article" />
 				</div>
-
 			</div>
-
 		</div>
 	</div>
 </template>

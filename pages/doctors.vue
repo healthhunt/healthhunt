@@ -19,12 +19,14 @@ const { pending, data: doctors } = useLazyAsyncData(() => $client.doctor.list.qu
 <template>
 	<div class="grid place-items-center gap-4">
 		<div class="prose">
-			<h1> Search for any doctor. </h1>
+			<h1> Search for any doctor </h1>
 		</div>
 
-		<input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+		<input v-model="search" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
 
-
+		<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+			<Doctor v-for="doctor of doctors" :doctor="doctor" />
+		</div>
 
 	</div>
 </template>

@@ -1,37 +1,19 @@
-<script setup lang="ts">
-import type { inferRouterOutputs } from '@trpc/server';
-import { AppRouter } from '~/server/trpc/routers';
-
-const { $client } = useNuxtApp();
-
-async function getArticles() {
-	const data = await $client.article.getRecommended.query({
-		text: content.value,
-	});
-
-	articles.value = data;
-}
-
-const content = ref('');
-const articles = ref<inferRouterOutputs<AppRouter>['article']['getRecommended']>();
-</script>
-
 <template>
-	<div class="grid place-items-center justify-center">
+	<div class="hero">
 		<div class="hero-content text-center">
-			<form class="prose flex flex-col gap-6 items-center" v-if="!articles" @submit.prevent="getArticles">
-				<h1> How are you feeling? </h1>
-				<textarea v-model="content" class="textarea textarea-bordered resize-none w-96 h-32"></textarea>
-				<button class="btn btn-primary w-6/12" type="submit">Submit</button>
-			</form>
-
-			<div v-else class="prose max-w-full py-16">
-				<h1>Your tailored articles are in!</h1>
-
-				<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-					<Article v-for="article of articles" :article="article" />
-				</div>
+			<div class="max-w-md">
+				<h1 class="text-5xl font-bold">Welcome to HealthSite</h1>
+				<p class="py-6">We're working hard to provide you with accurate and reputable articles and doctors.</p>
+				<button class="btn btn-primary">Get Started</button>
 			</div>
 		</div>
+	</div>
+
+	<div class="absolute bottom-0 left-0 w-full overflow-hidden leading-0"><svg xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 1200 180" preserveAspectRatio="none" class="fill-primary w-full block relative max-h-32">
+			<path
+				d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V180H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z">
+			</path>
+		</svg>
 	</div>
 </template>

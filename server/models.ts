@@ -8,7 +8,7 @@ export const Doctor = z.object({
 	phone: z.string(),
 	latitude: z.number(),
 	longitude: z.number(),
-	stars: z.number().int().min(0).max(5),
+	stars: z.number().min(0).max(5),
 });
 
 export const Article = z.object({

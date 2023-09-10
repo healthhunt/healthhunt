@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	devtools: { enabled: true },
 	modules: [
@@ -11,12 +10,9 @@ export default defineNuxtConfig({
 	},
 	auth: {
 		isEnabled: true,
-		origin: 'http://localhost:3000',
+		// origin: 'http://localhost:3000',
 		basePath: '/api/auth',
-		enableSessionRefreshPeriodically: false,
-		enableSessionRefreshOnWindowFocus: true,
-		globalAppMiddleware: false,
-		defaultProvider: undefined,
+		enableGlobalAppMiddleware: true,
 		addDefaultCallbackUrl: true,
 		globalMiddlewareOptions: {
 			allow404WithoutAuth: true,

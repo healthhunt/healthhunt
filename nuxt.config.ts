@@ -19,9 +19,5 @@ export default defineNuxtConfig({
 			allow404WithoutAuth: true,
 			addDefaultCallbackUrl: true
 		}
-	},
-	server: {
-		host: '0.0.0.0',
-		port: 3020
 	}
 });

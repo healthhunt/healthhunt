@@ -10,6 +10,25 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "nuxt": "^3.7.1"
+    "@nuxtjs/eslint-module": "^4.1.0",
+    "@nuxtjs/tailwindcss": "^6.8.0",
+    "@sidebase/nuxt-auth": "0.6.0-beta.5",
+    "@tailwindcss/typography": "^0.5.10",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "daisyui": "^3.7.3",
+    "eslint": "^8.49.0",
+    "nuxt": "^3.7.1",
+    "prisma": "^5.2.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.2.0",
+    "@trpc/client": "^10.38.1",
+    "@trpc/server": "^10.38.1",
+    "dotenv": "^16.3.1",
+    "next-auth": "4.21.1",
+    "openai": "^4.6.0",
+    "trpc-nuxt": "^0.10.12",
+    "zod": "^3.22.2"
   }
 }

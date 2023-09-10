@@ -14,7 +14,7 @@ const links = [
 </script>
 
 <template>
-	<div class="flex p-6 bg-base-200">
+	<div class="flex p-6 m-0 bg-base-200">
 		<div class="navbar w-full">
 			<div class="navbar-start">
 				<div class="dropdown">
@@ -29,7 +29,11 @@ const links = [
 						</li>
 					</ul>
 				</div>
-				<NuxtLink to="/" class="btn btn-ghost normal-case text-xl">HealthSite</NuxtLink>
+				<NuxtLink to="/" class="btn btn-ghost normal-case">
+					<span class="text-2xl font-bold">
+						Health<span class="text-primary">Hunt</span>
+					</span>
+				</NuxtLink>
 			</div>
 			<div class="navbar-center hidden lg:flex">
 				<ul class="menu menu-horizontal px-1">

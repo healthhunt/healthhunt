@@ -19,5 +19,5 @@ export default defineNuxtConfig({
 			allow404WithoutAuth: true,
 			addDefaultCallbackUrl: true
 		}
-	}
+	},
 });

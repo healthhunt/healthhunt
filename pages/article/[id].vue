@@ -3,14 +3,14 @@ const route = useRoute();
 const { $client } = useNuxtApp();
 
 const { pending, data: article } = useLazyAsyncData(() => $client.article.get.query({
-	id: parseInt(route.params.id),
+	id: parseInt(Array.isArray(route.params.id) ? route.params.id[0] : route.params.id),
 }), {
 	server: false,
 });
 
 // https://nuxt.com/docs/api/composables/use-head
 useHead({
-	title: article?.title ?? 'Medihacks'
+	title: article.value?.title ?? 'Medihacks'
 });
 </script>
 

@@ -1,0 +1,7 @@
+tags:
+
+give me 5 relevant tags for the article in a JSON array in lower case
+
+article:
+
+write me an article about Preventive Care and output it in simple html

@@ -16,15 +16,19 @@ defineProps<{
 				<p>{{ doctor.location }}</p>
 			</span>
 			<h3 class="text-lg">{{ doctor.description }}</h3>
+			<div class="flex flex-wrap gap-1">
+				<span v-for="tag of doctor.tags" class="badge badge-outline badge-accent">{{ tag }}</span>
+			</div>
 		</div>
 		<div class="card-actions p-6">
 			<div class="rating">
-				<input type="radio" :name="`rating-${doctor.id}`" class="mask mask-star" />
-				<input type="radio" :name="`rating-${doctor.id}`" class="mask mask-star" checked />
-				<input type="radio" :name="`rating-${doctor.id}`" class="mask mask-star" />
-				<input type="radio" :name="`rating-${doctor.id}`" class="mask mask-star" />
-				<input type="radio" :name="`rating-${doctor.id}`" class="mask mask-star" />
+				<input v-for="_ in (doctor.stars - 1)" type="radio" :name="`rating-${doctor.id}`"
+					class="mask mask-star-2 bg-orange-400" />
+				<input type="radio" :name="`rating-${doctor.id}`" class="mask mask-star-2 bg-orange-400" checked />
+				<input v-for="_ in (5 - doctor.stars)" type="radio" :name="`rating-${doctor.id}`"
+					class="mask mask-star-2 bg-orange-400" />
 			</div>
+
 			<p class="ml-auto">{{ doctor.phone }}</p>
 		</div>
 	</div>

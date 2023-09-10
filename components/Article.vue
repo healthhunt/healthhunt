@@ -24,18 +24,25 @@ watch(liked, async liked => {
 
 <template>
 	<div class="card w-96 bg-base-200 shadow-xl">
-		<figure><img :src="article.thumbnail" alt="" class="object-cover" /></figure>
-		<div class="card-body">
+		<figure class="m-0">
+			<img :src="article.thumbnail" alt="" />
+		</figure>
+
+		<div class="card-body relative">
+			<div class="absolute top-8 right-8">
+				<Like v-model="liked" />
+			</div>
+
 			<NuxtLink :to="`/article/${article.id}`">
-				<h2 class="card-title">
+				<h2 class="card-title text-left pr-7">
 					{{ article.title }}
 				</h2>
 			</NuxtLink>
+
 			<p class="line-clamp-4 text-left prose" v-html="article.description" />
 			<div class="card-actions flex">
-				<Like v-model="liked" />
 				<div class="flex flex-wrap ml-auto gap-1">
-					<div v-for="tag of article.tags" class="badge badge-outline">{{ tag }}</div>
+					<div v-for="tag of article.tags" class="badge badge-outline badge-accent">{{ tag }}</div>
 				</div>
 			</div>
 		</div>

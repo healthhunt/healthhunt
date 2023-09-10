@@ -17,6 +17,22 @@ export default router({
 				select: {
 					id: true,
 					username: true,
+					profile: true,
+				},
+			});
+		}),
+	updateProfile: procedure
+		.input(z.object({
+			data: z.string(),
+		}))
+		.output(z.void())
+		.mutation(async ({ ctx, input }) => {
+			await ctx.prisma.user.update({
+				where: {
+					id: ctx.session.user.id,
+				},
+				data: {
+					profile: input.data,
 				},
 			});
 		}),

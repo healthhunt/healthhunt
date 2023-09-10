@@ -1,0 +1,91 @@
+    General Health:
+        Nutrition and Diet
+        
+
+    Medical Specialties:
+        Cardiology (Heart Health)
+        Dermatology (Skin Health)
+        Gastroenterology (Digestive Health)
+        Ophthalmology (Eye Health)
+        Orthopedics (Musculoskeletal Health)
+
+    Chronic Illnesses:
+        
+        Hypertension (High Blood Pressure)
+        Respiratory Diseases (e.g., Asthma, COPD)
+
+    Infectious Diseases:
+        
+        HIV/AIDS
+        Influenza
+        Sexually Transmitted Infections (STIs)
+
+    Mental Health Categories:
+        Anxiety Disorders
+        Bipolar Disorder
+        Schizophrenia
+
+    Therapies and Treatments:
+        Psychotherapy
+        Medication Management
+        Rehabilitation
+        Holistic Health
+
+    Addiction and Substance Abuse:
+        Behavioral Addictions (e.g., Gambling)
+
+    Child and Adolescent Health:
+        Pediatric Medicine
+        Adolescent Mental Health
+        
+
+Other Related Fields:
+
+    Public Health:
+        Epidemiology
+        Health Promotion
+        Global Health
+
+    Alternative and Complementary Medicine:
+        Herbal Medicine
+        Chiropractic Care
+
+    Healthcare Systems and Policy:
+        Healthcare Reform
+        
+        Healthcare Access
+
+    Bioethics and Medical Ethics:
+        End-of-life Care
+        Patient Rights
+        Medical Research Ethics
+
+    Gerontology (Aging):
+        Elderly Care
+        Dementia and Alzheimer's Disease
+        
+
+    Nutritional Science:
+        Nutritional Therapy
+        Food Science
+        Dietary Guidelines
+
+    Women's Health:
+        Obstetrics and Gynecology
+        Reproductive Health
+        Menopause
+
+    Men's Health:
+        Prostate Health
+        Erectile Dysfunction
+        Testosterone Therapy
+
+    Environmental Health:
+        Pollution and Health
+        Occupational Health
+        Climate Change and Health
+
+    Exercise Science:
+        Sports Medicine
+        Exercise Physiology
+        Physical Therapy

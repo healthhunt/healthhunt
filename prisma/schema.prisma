@@ -15,7 +15,8 @@ model User {
   likedArticles Article[]
   likedDoctors  Doctor[]
 
-  salt String @default(uuid()) @db.Uuid
+  salt    String  @default(uuid()) @db.Uuid
+  profile String?
 
   @@map(name: "user")
 }
@@ -30,6 +31,9 @@ model Doctor {
   longitude   Float
   stars       Float
   tags        String[]
+
+  descriptionLower String
+  nameLower        String
 
   likedBy User[]
 

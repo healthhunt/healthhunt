@@ -9,6 +9,7 @@ export const Doctor = z.object({
 	latitude: z.number(),
 	longitude: z.number(),
 	stars: z.number().min(0).max(5),
+	tags: z.string().array(),
 });
 
 export const Article = z.object({
@@ -22,6 +23,7 @@ export const Article = z.object({
 export const User = z.object({
 	id: z.number().int(),
 	username: z.string(),
+	profile: z.string().nullable(),
 });
 
 export const WithLiked = z.object({

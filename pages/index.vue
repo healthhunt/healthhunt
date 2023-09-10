@@ -1,10 +1,14 @@
+<script setup lang="ts">
+definePageMeta({ auth: false });
+</script>
+
 <template>
-	<div class="hero">
+	<div class="hero min-h-screen">
 		<div class="hero-content text-center">
 			<div class="max-w-md">
-				<h1 class="text-5xl font-bold">Welcome to HealthSite</h1>
+				<h1 class="text-5xl font-bold">Welcome to HealthHunt</h1>
 				<p class="py-6">We're working hard to provide you with accurate and reputable articles and doctors.</p>
-				<button class="btn btn-primary">Get Started</button>
+				<NuxtLink to="/articles" class="btn btn-primary"> Get Started </NuxtLink>
 			</div>
 		</div>
 	</div>

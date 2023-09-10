@@ -43,13 +43,13 @@ export default router({
 				where: {
 					OR: [
 						{
-							name: {
-								contains: input.search,
+							nameLower: {
+								contains: input.search?.toLowerCase(),
 							},
 						},
 						{
-							description: {
-								contains: input.search,
+							descriptionLower: {
+								contains: input.search?.toLowerCase(),
 							},
 						},
 					],

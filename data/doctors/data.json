@@ -7,7 +7,7 @@
 		"phone": "(555) 123-4567",
 		"latitude": 34.0522,
 		"longitude": -118.2437,
-		"stars": 4.5,
+		"stars": 2,
 		"tags": [
 			"therapist",
 			"counselor",
@@ -23,7 +23,7 @@
 		"phone": "(555) 987-6543",
 		"latitude": 40.7128,
 		"longitude": -74.0060,
-		"stars": 4.2,
+		"stars": 4,
 		"tags": [
 			"psychiatrist",
 			"mood disorders",
@@ -39,7 +39,7 @@
 		"phone": "(555) 567-8901",
 		"latitude": 37.7749,
 		"longitude": -122.4194,
-		"stars": 4.7,
+		"stars": 3,
 		"tags": [
 			"psychologist",
 			"counselor",
@@ -55,7 +55,7 @@
 		"phone": "(555) 234-5678",
 		"latitude": 0.00,
 		"longitude": 0.00,
-		"stars": 0.0,
+		"stars": 1,
 		"tags": [
 			"therapist",
 			"child therapy",
@@ -70,7 +70,7 @@
 		"phone": "(555) 789-0123",
 		"latitude": 41.8781,
 		"longitude": -87.6298,
-		"stars": 4.8,
+		"stars": 4,
 		"tags": [
 			"psychologist",
 			"child psychologist",
@@ -86,7 +86,7 @@
 		"phone": "(555) 456-7890",
 		"latitude": 34.0522,
 		"longitude": -118.2437,
-		"stars": 4.6,
+		"stars": 5,
 		"tags": [
 			"counselor",
 			"marriage counselor",
@@ -102,7 +102,7 @@
 		"phone": "(555) 345-6789",
 		"latitude": 40.7128,
 		"longitude": -74.0060,
-		"stars": 4.9,
+		"stars": 3,
 		"tags": [
 			"psychiatrist",
 			"mood disorders",
@@ -118,7 +118,7 @@
 		"phone": "(555) 234-5678",
 		"latitude": 37.7749,
 		"longitude": -122.4194,
-		"stars": 4.7,
+		"stars": 4,
 		"tags": [
 			"therapist",
 			"trauma therapy",

@@ -11,7 +11,7 @@ export default defineNuxtConfig({
 	},
 	auth: {
 		isEnabled: true,
-		// origin: 'http://localhost:3000',
+		origin: process.env.ORIGIN,
 		basePath: '/api/auth',
 		enableGlobalAppMiddleware: true,
 		addDefaultCallbackUrl: true,

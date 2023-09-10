@@ -1,63 +1,34 @@
-# Nuxt 3 Minimal Starter
+# HealthHunt ❤️
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+The best of health, all in one place.
 
-## Setup
+## Getting Started
 
-Make sure to install the dependencies:
+### Prerequisites
 
-```bash
-# npm
-npm install
+- [Node.js](https://nodejs.org/en/)
+- [pnpm](https://pnpm.io/)
 
-# pnpm
-pnpm install
+### Installation
 
-# yarn
-yarn install
-```
+1. Clone the repo
 
-## Development Server
+  ```sh
+  git clone
+  ```
 
-Start the development server on `http://localhost:3000`:
+2. Install packages
 
-```bash
-# npm
-npm run dev
+  ```sh
+  pnpm install
+  ```
 
-# pnpm
+## Usage
+
+```sh
 pnpm run dev
-
-# yarn
-yarn dev
 ```
 
-## Production
+## License
 
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Distributed under the MIT License. See `LICENSE` for more information.

@@ -5,6 +5,14 @@ import { Doctor } from '~/server/models';
 
 export default router({
 	list: procedure
+		.meta({
+			openapi: {
+				method: 'GET',
+				path: '/doctors',
+				summary: 'Get doctors',
+				tags: ['Doctor'],
+			},
+		})
 		.input(z.object({
 			distance: z.object({
 				latitude: z.number(),

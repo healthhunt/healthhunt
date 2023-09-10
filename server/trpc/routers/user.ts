@@ -7,6 +7,14 @@ import { User } from '~/server/models';
 
 export default router({
 	me: procedure
+		.meta({
+			openapi: {
+				method: 'GET',
+				path: '/profile',
+				summary: 'Get current user',
+				tags: ['User'],
+			},
+		})
 		.input(z.void())
 		.output(User)
 		.query(async ({ ctx }) => {
@@ -22,6 +30,14 @@ export default router({
 			});
 		}),
 	updateProfile: procedure
+		.meta({
+			openapi: {
+				method: 'PATCH',
+				path: '/profile',
+				summary: 'Update profile',
+				tags: ['User'],
+			},
+		})
 		.input(z.object({
 			data: z.string(),
 		}))
@@ -37,6 +53,14 @@ export default router({
 			});
 		}),
 	resetPassword: procedure
+		.meta({
+			openapi: {
+				method: 'POST',
+				path: '/reset-password',
+				summary: 'Reset password',
+				tags: ['User'],
+			},
+		})
 		.input(z.object({
 			currentPassword: z.string(),
 			newPassword: z.string(),

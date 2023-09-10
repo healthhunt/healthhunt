@@ -1,7 +1,5 @@
 import 'dotenv/config';
 
-import util from 'node:util';
-
 import { z } from 'zod';
 import { TRPCError } from '@trpc/server';
 import OpenAI from 'openai';
@@ -31,6 +29,14 @@ const cache = new Map();
 
 export default router({
 	getLiked: procedure
+		.meta({
+			openapi: {
+				method: 'GET',
+				path: '/articles/liked',
+				summary: 'Get liked articles',
+				tags: ['Article'],
+			},
+		})
 		.input(z.void())
 		.output(Article.array())
 		.query(async ({ ctx }) => {
@@ -45,6 +51,14 @@ export default router({
 			});
 		}),
 	getRecommended: procedure
+		.meta({
+			openapi: {
+				method: 'GET',
+				path: '/articles/recommended',
+				summary: 'Get recommended articles',
+				tags: ['Article'],
+			},
+		})
 		.input(z.object({
 			text: z.string(),
 		}))
@@ -109,6 +123,14 @@ export default router({
 			return articles;
 		}),
 	get: procedure
+		.meta({
+			openapi: {
+				method: 'GET',
+				path: '/articles/{id}',
+				summary: 'Get article',
+				tags: ['Article'],
+			},
+		})
 		.input(z.object({
 			id: z.number().int()
 		}))
@@ -140,6 +162,14 @@ export default router({
 			return article;
 		}),
 	like: procedure
+		.meta({
+			openapi: {
+				method: 'POST',
+				path: '/articles/{id}/like',
+				summary: 'Like article',
+				tags: ['Article'],
+			},
+		})
 		.input(z.object({
 			id: z.number().int()
 		}))
@@ -159,6 +189,14 @@ export default router({
 			});
 		}),
 	unlike: procedure
+		.meta({
+			openapi: {
+				method: 'POST',
+				path: '/articles/{id}/unlike',
+				summary: 'Unlike article',
+				tags: ['Article'],
+			},
+		})
 		.input(z.object({
 			id: z.number().int()
 		}))
